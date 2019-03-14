@@ -74,6 +74,7 @@
     button.add:hover {
         color: white;
         background: linear-gradient(to bottom, rgb(166, 240, 105), rgb(52, 139, 71));
+        cursor: pointer;
     }
     
     button.delete {
@@ -88,4 +89,5 @@
     button.delete:hover {
         background: rgb(233, 115, 115);
         color: rgb(255, 255, 255);
+        cursor: pointer;
     }
