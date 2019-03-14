@@ -1,0 +1,19 @@
+nav,
+a {
+    left: 0;
+    padding: 1em 0;
+    padding-right: 0%;
+    color: rgb(255, 255, 255);
+    background: rgb(18, 138, 236);
+    margin: 2px;
+    text-decoration: none;
+}
+
+a {
+    padding: 1em;
+}
+
+a:hover {
+    color: aqua;
+    border: 1px solid;
+}

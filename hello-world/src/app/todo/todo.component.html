@@ -1,0 +1,20 @@
+<div>
+    <h2 class="header">This is my todo app.</h2>
+    <ul>
+        <form><span class="form">
+            <input [(ngModel)]="New_todo" name="New_todo" placeholder="Enter New ToDo!" />
+            <button (click)="addNewTodo()">Add</button></span>
+        </form>
+
+        <table class="table table-bordered">
+            <th>To Do List:</th>
+            <tr class="list" *ngIf="New_todo==''">Please enter something <button>Cancel <small>currently not working.</small></button></tr>
+
+            <tr class="list" *ngFor="let todo of todos">
+                <span> {{todo.task}}</span><button class="delete" (click)="removeTodo()">Delete</button>
+            </tr>
+
+        </table>
+
+    </ul>
+</div>

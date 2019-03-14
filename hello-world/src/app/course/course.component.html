@@ -1,0 +1,28 @@
+<ul class="nav nav-pills">
+    <li [class.active]="viewMode=='about'"><a (click)="ViewMode = 'about'">About</a></li>
+    <li [class.active]="viewMode=='home'"><a (click)="ViewMode = 'home'">Home</a></li>
+    <li [class.active]="viewMode=='services'"><a (click)="ViewMode = 'services'">Services</a></li>
+    <li [class.active]="viewMode=='contact'"><a (click)="ViewMode = 'contact'">Contact</a></li>
+</ul>
+<div [ngSwitch]="ViewMode">
+    <div *ngSwitchCase="'about'">About Content</div>
+    <div *ngSwitchCase="'home'">Home Content</div>
+    <div *ngSwitchCase="'services'">Service Content</div>
+    <div *ngSwitchCase="'contact'">Contact Content</div>
+    <div *ngSwitchDefault>Default Content</div>
+
+</div>
+
+<div>
+    <ul>
+        <form>
+            <input [(ngModel)]="courseName" name="courseName" placeholder="CoursesName" (keyup.enter)="onAdd()" />
+        </form>
+        <button (click)="onAdd()">Add 4th course</button>
+        <li class="list" *ngFor="let course of courses; index as i; even as isEven ">
+            {{i+1}} - {{course.name}}<span *ngIf="isEven">(This is odd)</span>
+            <button style="background:red" (click)="onDel(course)">Delete</button>
+        </li>
+    </ul>
+
+</div>
