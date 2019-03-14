@@ -1,3 +1,7 @@
+h3 {
+    justify-items: center
+}
+
 [class*='col-'] {
     float: left;
     padding-right: 15px;
